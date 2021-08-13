@@ -32,5 +32,4 @@ function startColorChange() {
 function stopColorChange() {
   clearInterval(timerId);
   refs.startBtn.disabled = false;
-  refs.body.style.backgroundColor = colors[0];
 };
