@@ -24,7 +24,8 @@ refs.stopBtn.addEventListener("click", stopColorChange);
 
 function startColorChange() {
   timerId = setInterval(() => {
-      refs.body.style.backgroundColor = colors[randomIntegerFromInterval(0, colors.length - 1)];
+    refs.body.style.backgroundColor = colors[randomIntegerFromInterval(0, colors.length - 1)];
+    // refs.body.style.backgroundColor = randomColor();
   }, 1000);
   refs.startBtn.disabled = true;
 };
@@ -32,4 +33,11 @@ function startColorChange() {
 function stopColorChange() {
   clearInterval(timerId);
   refs.startBtn.disabled = false;
+};
+
+// ДОПОЛНИТЕЛЬНО из занятия с ментором
+// Рандомный цвет
+
+function randomColor() {
+  return `rgb(${randomIntegerFromInterval(0,255)},${randomIntegerFromInterval(0,255)},${randomIntegerFromInterval(0,255)})`;
 };
